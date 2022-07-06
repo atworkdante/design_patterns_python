@@ -1,19 +1,19 @@
 # pylint: disable=too-few-public-methods
-"The Factory Concept"
+"""The Factory Concept"""
 from abc import ABCMeta, abstractmethod
 
 
 class IProduct(metaclass=ABCMeta):
-    "A Hypothetical Class Interface (Product)"
+    """A Hypothetical Class Interface (Product)"""
 
     @staticmethod
     @abstractmethod
     def create_object():
-        "An abstract interface method"
+        """An abstract interface method"""
 
 
 class ConcreteProductA(IProduct):
-    "A Concrete Class that implements the IProduct interface"
+    """A Concrete Class that implements the IProduct interface"""
 
     def __init__(self):
         self.name = "ConcreteProductA"
@@ -23,7 +23,7 @@ class ConcreteProductA(IProduct):
 
 
 class ConcreteProductB(IProduct):
-    "A Concrete Class that implements the IProduct interface"
+    """A Concrete Class that implements the IProduct interface"""
 
     def __init__(self):
         self.name = "ConcreteProductB"
@@ -33,7 +33,7 @@ class ConcreteProductB(IProduct):
 
 
 class ConcreteProductC(IProduct):
-    "A Concrete Class that implements the IProduct interface"
+    """A Concrete Class that implements the IProduct interface"""
 
     def __init__(self):
         self.name = "ConcreteProductC"
@@ -43,11 +43,11 @@ class ConcreteProductC(IProduct):
 
 
 class Creator:
-    "The Factory Class"
+    """The Factory Class"""
 
     @staticmethod
     def create_object(some_property):
-        "A static method to get a concrete product"
+        """A static method to get a concrete product"""
         if some_property == 'a':
             return ConcreteProductA()
         if some_property == 'b':
@@ -58,6 +58,6 @@ class Creator:
 
 
 # The Client
-#PRODUCT = Creator().create_object('c')
+# PRODUCT = Creator().create_object('c')
 PRODUCT = Creator().create_object('a')
 print(PRODUCT.name)
