@@ -1,10 +1,10 @@
 # pylint: disable=too-few-public-methods
-"The Abstract Factory Interface"
+"""The Abstract Factory Interface"""
 from abc import ABCMeta, abstractmethod
 
 
 class IFurnitureFactory(metaclass=ABCMeta):
-    "Abstract Furniture Factory Interface"
+    """Abstract Furniture Factory Interface"""
 
     @staticmethod
     @abstractmethod

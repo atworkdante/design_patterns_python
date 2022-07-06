@@ -1,12 +1,12 @@
 # pylint: disable=too-few-public-methods
-"The Table Interface"
+"""The Chair Interface"""
 from abc import ABCMeta, abstractmethod
 
 
-class ITable(metaclass=ABCMeta):
-    "The Table Interface (Product)"
+class IChair(metaclass=ABCMeta):
+    """The Chair Interface (Product)"""
 
     @staticmethod
     @abstractmethod
     def get_dimensions():
-        "A static interface method"
+        """A static interface method"""

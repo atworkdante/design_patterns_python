@@ -1,9 +1,9 @@
-"A Class of Table"
+"""A Class of Table"""
 from interface_table import ITable
 
 
 class BigTable(ITable):  # pylint: disable=too-few-public-methods
-    "The Big Chair Concrete Class implements the ITable interface"
+    """The Big Chair Concrete Class implements the ITable interface"""
 
     def __init__(self):
         self._height = 60

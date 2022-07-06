@@ -1,25 +1,25 @@
 # pylint: disable=too-few-public-methods
 "Abstract Factory Concept Sample Code"
 from abc import ABCMeta, abstractmethod
-from factory_a import FactoryA
-from factory_b import FactoryB
+from abstract_factory.usecase.factory_a import FactoryA
+from abstract_factory.usecase.factory_b import FactoryB
 
 
 class IAbstractFactory(metaclass=ABCMeta):
-    "Abstract Factory Interface"
+    """Abstract Factory Interface"""
 
     @staticmethod
     @abstractmethod
     def create_object(factory):
-        "The static Abstract factory interface method"
+        """The static Abstract factory interface method"""
 
 
 class AbstractFactory(IAbstractFactory):
-    "The Abstract Factory Concrete Class"
+    """The Abstract Factory Concrete Class"""
 
     @staticmethod
     def create_object(factory):
-        "Static get_factory method"
+        """Static get_factory method"""
         try:
             if factory in ['aa', 'ab', 'ac']:
                 return FactoryA().create_object(factory[1])

@@ -1,5 +1,5 @@
 # pylint: disable=too-few-public-methods
-"FactoryA Sample Code"
+"""FactoryA Sample Code"""
 from abc import ABCMeta, abstractmethod
 
 
@@ -13,7 +13,7 @@ class IProduct(metaclass=ABCMeta):
 
 
 class ConcreteProductA(IProduct):
-    "A Concrete Class that implements the IProduct interface"
+    """A Concrete Class that implements the IProduct interface"""
 
     def __init__(self):
         self.name = "ConcreteProductA"
@@ -23,7 +23,7 @@ class ConcreteProductA(IProduct):
 
 
 class ConcreteProductB(IProduct):
-    "A Concrete Class that implements the IProduct interface"
+    """A Concrete Class that implements the IProduct interface"""
 
     def __init__(self):
         self.name = "ConcreteProductB"
